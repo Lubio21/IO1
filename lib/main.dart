@@ -31,7 +31,7 @@ class _KockaPageState extends State<KockaPage> {
   final Random _random = Random();
   int _kockaValue = 1;
 
-  void _rollDice() {
+  void _tocKocku() {
     // setState prekreslí obrazovku s novou náhodnou stranou kocky.
     setState(() {
       _kockaValue = _random.nextInt(6) + 1;
@@ -59,7 +59,7 @@ class _KockaPageState extends State<KockaPage> {
             ),
             const SizedBox(height: 24),
             ElevatedButton(
-              onPressed: _rollDice,
+              onPressed: _tocKocku,
               child: const Text('Hodiť kockou'),
             ),
           ],
